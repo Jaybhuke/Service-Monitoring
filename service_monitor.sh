@@ -11,3 +11,10 @@ HOSTNAME=$(hostname)
 echo "Check at $DATE on $HOSTNAME" >> $LOG_FILE
 
 STATUS=$(systemctl is-active $SERVICE)
+
+
+if [ $STATUS != "active" ]; then
+	echo "Service is down"
+fi
+
+#echo "Service status is: $STATUS"
