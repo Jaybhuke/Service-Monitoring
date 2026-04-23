@@ -35,3 +35,6 @@ else
 	echo "$SERVICE is running" >> $LOG_FILE
 		
 fi
+
+echo "-------------------" >> $LOG_FILE
+
