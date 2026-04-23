@@ -36,5 +36,6 @@ else
 		
 fi
 
-echo "-------------------" >> $LOG_FILE
+
+echo "----------------" $LOG_FILE
 
