@@ -14,7 +14,11 @@ STATUS=$(systemctl is-active $SERVICE)
 
 
 if [ $STATUS != "active" ]; then
-	echo "Service is down"
-fi
 
-#echo "Service status is: $STATUS"
+	echo "$SERVICE is down at $DATE" >> $LOG_FILE
+
+	sudo systemctl start $SERVICE
+
+	echo "Attempted to restart $SERVICE" >> $LOG_FILE
+		
+fi
