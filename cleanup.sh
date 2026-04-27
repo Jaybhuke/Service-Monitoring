@@ -17,3 +17,5 @@ fi
 find $TARGET_DIR -type f -mtime +$DAYS -print -exec rm -f {} \; >> $LOG_FILE
 
 echo "Cleanup completed at $(date)" >> $LOG_FILE
+
+echo "--------------------" >> $LOG_FILE
